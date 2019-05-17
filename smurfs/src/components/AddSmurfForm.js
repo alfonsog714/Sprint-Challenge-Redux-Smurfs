@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { addSmurf } from "../actions";
 
+import "../styles/addsmurfform.css";
+
 class AddSmurfForm extends React.Component {
   state = {
     name: "",
@@ -28,13 +30,15 @@ class AddSmurfForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="add-smurf-form">
+        <h2>Add a Smurf</h2>
         <input
           placeholder="Add a name..."
           type="text"
           value={this.state.name}
           name="name"
           onChange={this.handleChanges}
+          className="smurf-input"
         />
         <input
           placeholder="Add an age..."
@@ -42,6 +46,7 @@ class AddSmurfForm extends React.Component {
           value={this.state.age}
           name="age"
           onChange={this.handleChanges}
+          className="smurf-input"
         />
         <input
           placeholder="Add a height..."
@@ -49,8 +54,9 @@ class AddSmurfForm extends React.Component {
           value={this.state.height}
           name="height"
           onChange={this.handleChanges}
+          className="smurf-input"
         />
-        <button>Add Smurf</button>
+        <button className="smurf-add-button">Add Smurf</button>
       </form>
     );
   }

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { getSmurfs } from "../actions";
 import { connect } from "react-redux";
 
-import "./App.css";
+import "../styles/smurflist.css";
+
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -15,14 +16,14 @@ class SmurfList extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="smurf-list">
         {this.props.smurfs.length === 0 ? (
-          <h2>Loading smurfs...</h2>
+          <h2 className="loading-text">Loading smurfs...</h2>
         ) : (
           this.props.smurfs.map(smurf => (
-            <div key={smurf.id}>
-              <h4>{smurf.name}</h4>
-              <ul>
+            <div key={smurf.id} className="smurf">
+              <h4 className="smurf-name">{smurf.name}</h4>
+              <ul className="smurf-attributes">
                 <li>Age in Smurf years: {smurf.age}</li>
                 <li>Height: {smurf.height}</li>
               </ul>

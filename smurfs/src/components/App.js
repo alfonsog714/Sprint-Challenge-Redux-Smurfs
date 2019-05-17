@@ -2,7 +2,7 @@ import React from "react";
 import SmurfList from "./SmurfList";
 import AddSmurfForm from "./AddSmurfForm";
 
-import "./App.css";
+import "../styles/app.css";
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -11,10 +11,10 @@ import "./App.css";
  */
 const App = () => {
   return (
-    <React.Fragment>
+    <div className="app">
       <SmurfList />
       <AddSmurfForm />
-    </React.Fragment>
+    </div>
   );
 };
 
