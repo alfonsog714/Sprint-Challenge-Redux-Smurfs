@@ -1,0 +1,40 @@
+.add-smurf-form {
+  /* border: 2px solid red; */
+  min-height: 50vh;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.smurf-input {
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  font-size: 1.2rem;
+  border-bottom: 1px solid grey;
+}
+
+.smurf-input:focus {
+  outline: none;
+}
+
+.smurf-input::placeholder {
+  font-size: 1.2rem;
+}
+
+.smurf-add-button {
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  background: rgb(78, 39, 206);
+  color: #cccccc;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+}
